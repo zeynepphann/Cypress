@@ -1,6 +1,7 @@
 describe('checkbox',()=>{
 
-    it('checking single box',()=>{
+    it.skip('checking single box',()=>{
+
     cy.visit('https://automationexercise.com/')
 
     cy.get(':nth-child(1) > .panel-heading').click()
@@ -11,9 +12,16 @@ describe('checkbox',()=>{
     //checkbox tikli mi 
     cy.get(':nth-child(1) > .panel-heading').should('be.checked')
 
-    //checkbox tiki kaldirmak
-    cy.get(':nth-child(1) > .panel-heading').uncheck()
-
-
+    //checkbox tiki kaldirma
+    cy.get(':nth-child(1) > .panel-heading').uncheck().should('not.be.checked')
     })
+
+    //cleck({multibe:true}) -> click(buraya yazilir) tek elemente uygulanir
+    //birden fazla elemente uygulamak icin multibe kullanilir 
+
+
+    
+
+
+
 })
