@@ -23,3 +23,16 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+
+//Cypress.Commands.add -> komut ekle, tanimla 
+
+
+
+ Cypress.Commands.add('login',(email,password) =>{ // sablon method gibi
+    cy.visit("https://automationexercise.com/")
+    cy.get('.shop-menu > .nav > :nth-child(4) > a').click()
+    cy.get('#email').type(email)
+    cy.get('#password').type(password)
+    cy.get('#Submit').click()
+}) 

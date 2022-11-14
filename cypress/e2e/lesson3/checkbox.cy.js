@@ -20,6 +20,22 @@ describe('checkbox',()=>{
     //birden fazla elemente uygulamak icin multibe kullanilir 
 
 
+    //Assert 
+    //1
+    cy.get("input[type='checkbox']").first().should('be.checked')
+
+    //2
+    cy.get("input[type='checkbox']").first().parent().should('have.class','checked') // checkbox'in parent'inda checkbox tikli oldugu zaman cikar "checked" yazisi var onu kontrol etmek icin 
+    //should('have.class','container')
+    
+    
+    //3 should('have.id','username') 
+    //4 should('have.type','text') 
+   
+
+
+
+
     
 
 

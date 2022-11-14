@@ -1,5 +1,5 @@
 describe('scroll',()=>{
-    it('scroll',()=>{
+    it('scroll into view',()=>{ //locate edilen yere gider 
         cy.visit('https://qa-environment.koalaresorthotels.com/') 
 
         cy.wait(2000)
