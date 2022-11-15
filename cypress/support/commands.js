@@ -36,3 +36,14 @@
     cy.get('#password').type(password)
     cy.get('#Submit').click()
 }) 
+
+
+//amazon search
+
+Cypress.Commands.add('amazonSearch',(productName)=>{
+    cy.visit('https://www.amazon.com/')
+    cy.get('#twotabsearchtextbox').type(productName)
+    cy.get('#nav-search-submit-button').click()
+})
+
+import 'cypress-file-upload'
