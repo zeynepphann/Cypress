@@ -9,6 +9,8 @@ describe('iframes',()=>{
         cy.iframe().find('p').type("Zeynep") 
         cy.get('.large-4 > div > a').should('contain.text','Elemental Selenium')
         cy.get('.large-4 > div > a').should('contain.text','Elemental Selenium').click() //yeni sekmeye gecer ve cypress ara yuzunde islem yaptirmaz 
+       
+       
 
     })
 })
