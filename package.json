@@ -4,10 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "merge": "mochawesome-marge cypress/reports/*.json > cypress/reports/output.json",
-    "generate_mochawesome_report": "marge cypress/reports/output.json —reportDir ./ —inline"
+    "test": "./node_modules/.bin/cypresss run",
+    "test-headed":"./node_modules/.bin/cypress run --headed",
+    "test-dashboard":"./node_modules/.bin/cypress run --spec /home/zeynephan/Masaüstü/Cypress/cypress/e2e/*js --record --key 0c7022ba-61c4-4708-a613-fc5f1899ffe5",
+    "test-chrome": "./node_modules/.bin/cypress run --headed --browser=chrome",
+    "merge": "npx mochawesome-merge cypress/reports/report*.json -o cypress/reports/output.json",
+    "generate_mochawesome_report": "marge cypress/reports/output.json --reportDir ./cypress/reports/output"
   },
+
   "keywords": [],
   "author": "",
   "license": "ISC",

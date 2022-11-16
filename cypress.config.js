@@ -17,7 +17,11 @@ module.exports = defineConfig({
       "json":true,
       "charts": true
     },
-    "video": false
+    "video": false,
+    "retries":{
+      "runMode" : 2,
+      "openMode" :0
+    }
 
 })
 
