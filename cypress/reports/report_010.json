@@ -1,0 +1,164 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-11-16T08:01:51.527Z",
+    "end": "2022-11-16T08:01:55.949Z",
+    "duration": 4422,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "89a3748c-6f93-4f4e-83b9-f77de7423bd7",
+      "title": "",
+      "fullFile": "cypress/e2e/lesson4/alerts.cy.js",
+      "file": "cypress/e2e/lesson4/alerts.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "188d7445-4251-4a2e-9a4f-a09459444f4a",
+          "title": "allerts",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "allerts test",
+              "fullTitle": "allerts allerts test",
+              "timedOut": null,
+              "duration": 1454,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"https://the-internet.herokuapp.com/javascript_alerts\");\ncy.get(':nth-child(1) > button').click();\ncy.get('#result').should('have.text', 'You successfully clicked an alert');",
+              "err": {},
+              "uuid": "8dbbc725-268c-4e01-8e91-700d4add39c6",
+              "parentUUID": "188d7445-4251-4a2e-9a4f-a09459444f4a",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "accept alert Test",
+              "fullTitle": "allerts accept alert Test",
+              "timedOut": null,
+              "duration": 473,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"https://the-internet.herokuapp.com/javascript_alerts\");\ncy.get(':nth-child(2) > button').click();\ncy.get('#result').should('have.text', 'You clicked: Ok');",
+              "err": {},
+              "uuid": "8909fbb1-9c16-4d73-8253-ddfbbec91c9c",
+              "parentUUID": "188d7445-4251-4a2e-9a4f-a09459444f4a",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "dismiss alert",
+              "fullTitle": "allerts dismiss alert",
+              "timedOut": null,
+              "duration": 474,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"https://the-internet.herokuapp.com/javascript_alerts\");\ncy.get(':nth-child(2) > button').click();\ncy.on(\"window:confirm\", str => {\n  return false; // cancel tiklamis olur true olsaydi ok tiklayacakti\n});\ncy.get('#result').should('have.text', 'You clicked: Cancel');",
+              "err": {},
+              "uuid": "d1e3974e-b04c-4ef5-b0c4-1ef909df403a",
+              "parentUUID": "188d7445-4251-4a2e-9a4f-a09459444f4a",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "entering text on the allert",
+              "fullTitle": "allerts entering text on the allert",
+              "timedOut": null,
+              "duration": 435,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"https://the-internet.herokuapp.com/javascript_alerts\");\ncy.window() // pop up pencelereleri kontrol edilir\n.then($windowElement => {\n  //prompt'a bilgi girisi saglar \n  cy.stub($windowElement, 'prompt').returns('hi'); //stub prompt'a mesaj gonderir\n  cy.get(':nth-child(3) > button').click();\n});\ncy.get('#result').should('have.text', 'You entered: hi');",
+              "err": {},
+              "uuid": "71fd12b5-4362-44fc-b3bc-78826b99fe83",
+              "parentUUID": "188d7445-4251-4a2e-9a4f-a09459444f4a",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "8dbbc725-268c-4e01-8e91-700d4add39c6",
+            "8909fbb1-9c16-4d73-8253-ddfbbec91c9c",
+            "d1e3974e-b04c-4ef5-b0c4-1ef909df403a",
+            "71fd12b5-4362-44fc-b3bc-78826b99fe83"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 2836,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "reportFilename": "report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "charts": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
