@@ -1,6 +1,6 @@
 import HomePage from '../pageObjectRepository/HomePage.cy'
 import LoginPage from '../pageObjectRepository/LoginPage.cy'
-
+/// <reference types="Cypress" />
 
 describe('Paylinn bank',()=>{
 
@@ -9,7 +9,7 @@ describe('Paylinn bank',()=>{
         this.data=data
       })   
     })
-
+      
 
     it('paylinn login test',function(){
 
