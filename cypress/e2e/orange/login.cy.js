@@ -26,7 +26,7 @@ describe('Orange login',()=>{
     })
 
     //pozitif
-    it('FixturesDemoTest',()=>{
+    it.only('FixturesDemoTest',()=>{
        cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
     
        
@@ -35,6 +35,17 @@ describe('Orange login',()=>{
        cy.get('.oxd-button').click()
          
        cy.get('.oxd-topbar-header-breadcrumb > .oxd-text').should('have.text',userdata[0].expected)
+       cy.get(':nth-child(7) > .oxd-main-menu-item').click()
+       cy.get('.oxd-autocomplete-text-input > input').type('Fiona  Grace')  
+
+       cy.get(':nth-child(2) > .oxd-input-group > :nth-child(2) > .oxd-select-wrapper > .oxd-select-text').click().type('Account Asistant')
+       cy.get(':nth-child(3) > .oxd-input-group > :nth-child(2) > .oxd-select-wrapper > .oxd-select-text').click().type('Sales')
+       cy.get(':nth-child(4) > .oxd-input-group > :nth-child(2) > .oxd-select-wrapper > .oxd-select-text').click().type('Current and Past Employees')
+       cy.get(':nth-child(5) > .oxd-input-group > :nth-child(2) > .oxd-select-wrapper > .oxd-select-text').click().type('Activated')
+       cy.get(':nth-child(6) > .oxd-input-group > :nth-child(2) > .oxd-date-wrapper > .oxd-date-input > .oxd-input').click().clear().type('2022-04-12')
+       cy.get('.oxd-button--secondary').click()
+
+       
        
      })
 
