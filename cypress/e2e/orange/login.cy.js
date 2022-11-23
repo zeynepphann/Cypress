@@ -44,11 +44,9 @@ describe('Orange login',()=>{
        cy.get(':nth-child(5) > .oxd-input-group > :nth-child(2) > .oxd-select-wrapper > .oxd-select-text').click().type('Activated')
        cy.get(':nth-child(6) > .oxd-input-group > :nth-child(2) > .oxd-date-wrapper > .oxd-date-input > .oxd-input').click().clear().type('2022-04-12')
        cy.get('.oxd-button--secondary').click()
-
-       
+       cy.get("button[type='reset']").click()
        
      })
-
 
      //negatif
     it('FixturesDemoTest',()=>{

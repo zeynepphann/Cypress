@@ -21,7 +21,6 @@ describe('Orange login',()=>{
 
             cy.get('.oxd-userdropdown-tab').click()
             cy.contains('Logout').click()
-
         }
         else{
             cy.get('.oxd-alert-content > .oxd-text').should('have.text',userdata.alert);
